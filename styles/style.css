@@ -1,11 +1,21 @@
 /*---- font----- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* common style or utilities */
 body{
     font-family: 'Poppins', sans-serif;
-
 }
-/* header style */
+
+.container{
+    width: 100%;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* Top section styles */
 .top-banner{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -16,11 +26,15 @@ h1{
     font-size: 50px;
 }
 .banner-info{
-    width: 485px;
+    /* width: 485px; */
     margin-left: 156px;
     margin-top: 200px;
     color: #FFFFFF;
-
+    transition: width 1s, height 1s, transform 1s;
+}
+.banner-info:hover{
+    width: 600px;
+    color: brown;
 }
 .banner-info a{
     text-decoration: none;
@@ -33,16 +47,6 @@ h1{
     width: 556px;
     height: 438px;
     margin-top: 153px; 
-}
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-.container{
-    margin-top: 70px;
 }
 /* players style */
 .players{
@@ -61,6 +65,17 @@ main{
     width: 330px;
     height: 256px;
 }
+/* Achievement styles */
+.achievement{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+}
+.achievement-detail{
+    border: 2px  solid rgba(61, 62, 63, 0.856);
+    padding: 15px;
+    box-shadow: 10px 10px 40px slategrey;
+} 
 /* footer style */
 footer{
     display: flex;
@@ -83,14 +98,31 @@ footer{
     font-size: 20px;
     font-weight: 400;
 }
-.achievement{
-    display: flex;
-    width: 50%;
+
+/* Media Queries */
+
+/* Mobile Device */
+@media only screen and (max-width:600px) {
+    .container{
+        width: 100%;
+    }
+    .top-banner, .players, .achievement{
+        grid-template-columns: repeat(1, 1fr);
+      
+
+    }   
 }
-.achievement-detail{
-    width: 100%;
-    border: 2px  solid rgba(6, 127, 248, 0.856);
-    padding: 10px;
-    margin-left: 100px;
-    box-shadow: 10px 10px 40px slategrey;
-} 
+/* Tablet/ipad devices */
+@media only screen and (min-width:600px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .top-banner, .achievement{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+    
