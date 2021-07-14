@@ -62,11 +62,35 @@ main{
     height: 256px;
 }
 /* footer style */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .logo img{
     width: 483px;
     height: 110px;
 }
-.fab{
-    
-    color: #969BAB;
+.icon a{
+    color: #0B0D17;
+    background-color: #969BAB;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 10px;
 }
+.copyright{
+    font-size: 20px;
+    font-weight: 400;
+}
+.achievement{
+    display: flex;
+    width: 50%;
+}
+.achievement-detail{
+    width: 100%;
+    border: 2px  solid rgba(6, 127, 248, 0.856);
+    padding: 10px;
+    margin-left: 100px;
+    box-shadow: 10px 10px 40px slategrey;
+} 
